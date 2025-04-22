@@ -214,17 +214,15 @@ font-weight: 100;
     color:#4c15e4e4;
 }
 
-.figFundoHome{
-    width: 50%;
-    height: 100%;
+.FundoHome{
+    
     background-image: url("../image/pele.png");
     background-repeat: no-repeat;
     background-size: cover;  
 }
 
-.figFundoHome3{
-    width: 50%;
-    height: 100%;
+.FundoHome3{
+    
     background-image: url("../image/HematoxilinQuad.png");
     background-repeat: no-repeat;
     background-size: cover;  
