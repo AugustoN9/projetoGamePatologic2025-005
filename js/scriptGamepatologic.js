@@ -63,11 +63,12 @@ function movePlayer(steps) {
   if (newPosition > 29) {
     
     exibirDialogoPato("Parabéns, fizemos um ótimo trabalho!");
-    currentPosition = 29;
+    
+    newPosition = 29;
   }
   
 
-   else if (newPosition == 7) {    
+   if (newPosition == 7) {    
 
     const sirene = new Audio("./audio/sirene.mp3");
     sirene.play();

@@ -238,57 +238,55 @@ font-weight: 100;
     background-position: center;
 }
 
-.figFundoReg{
+.figSec{
     width: 50%;
     height: 100%;
+}
+
+.FundoReg{
+    
     background-image: url("../image/01registroQuad.JPG");
     background-repeat: no-repeat;
     background-size: cover;  
 }
 
 .figFundoMacro{
-    -width: 100%;
     height: 100%;
     background-image: url("../image/fundoMacro.jpg");
     background-repeat: no-repeat;
     background-size: cover;  
 }
 
-.figFundoHisto{
-    width: 50%;
-    height: 100%;
+.FundoHisto{
+    
     background-image: url("../image/03histotecnicoQuad.JPG");
     background-repeat: no-repeat;
     background-size: cover;  
 }
 
-.figFundoBloco {
-    width: 50%;
-    height: 100%;
+.FundoBloco {
+   
     background-image: url("../image/04inclusaoQuad.JPG");
     background-repeat: no-repeat;
     background-size: cover;  
 }
 
-.figFundoCorte {
-    width: 50%;
-    height: 100%;
+.FundoCorte {
+    
     background-image: url("../image/05microtomiaQuad.JPG");
     background-repeat: no-repeat;
     background-size: cover;  
 }
 
-.figFundoColor {
-    width: 50%;
-    height: 100%;
+.FundoColor {
+    
     background-image: url("../image/06coloracaoQuad.JPG");
     background-repeat: no-repeat;
     background-size: cover;  
 }
 
-.figFundoMicro {
-    width: 50%;
-    height: 100%;
+.FundoMicro {
+    
     background-image: url("../image/MicroOrangeQuad.png");
     background-repeat: no-repeat;
     background-size: cover;  
@@ -374,4 +372,36 @@ z-index: 10;
 
   .dot.active {
     background-color: #070c89;
+  }
+
+  @media (max-width: 1190px) {
+    .textoEsq p{       
+        font-size: 1.3rem; 
+    }
+
+    .figFundoHome3 {
+        background-position-x: -50rem;
+    }
+  }
+
+  @media (max-width: 412px) {
+    .item {
+        flex-direction: column;
+    }
+    .textoEsq {
+        padding-top: 8rem;
+        width: 90%;
+    }
+    .figSec{
+        display: none;
+    }
+
+    .textoDir, 
+    .textoEsq,
+     .tituloCentro {
+        padding-top: 8rem;
+        width: 90%;
+        font-size: 1.3rem;
+    }
+
   }
