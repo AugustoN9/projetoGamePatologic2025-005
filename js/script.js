@@ -76,3 +76,24 @@ const navLinks = document.querySelectorAll(".nav-link");
         behavior: "smooth",
       });
     });
+
+  
+
+    window.addEventListener("scroll", () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      document.getElementById("progressBar").style.width = scrollPercent + "%";
+    });
+
+    
+
+    document.addEventListener("DOMContentLoaded", function() {
+      Swal.fire({
+        title: 'Bem-vindo ao Jogo PatoLogic!',
+        text: 'Clique nos círculos abaixo ou use a seta para a direita para avançar dentro dos tópicos. Explore o mapa do laboratório e conheça cada atividade, no final teste seus conhecimentos no Game PatoLogic!',
+        icon: 'info',
+        confirmButtonText: 'Vamos Começar!'
+      });
+    });
+    

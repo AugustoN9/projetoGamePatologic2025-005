@@ -7,12 +7,17 @@
   <title>Projeto PatoLogic</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/styleGamePatologic.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
+  <div id="progressContainer">
+    <div id="progressBar"></div>
+  </div>
+
   <nav class="navbar">
     <div class="logo">
-      <a href="#sec1" class="nav-link">
+      <a href="index.html" class="nav-link">
         <img src="./image/LogoPatologic2.png" alt="logo" />
       </a>
     </div>
@@ -28,6 +33,8 @@
       <a href="#sec9" class="nav-link">Game</a>
     </div>
   </nav>
+
+  
 
   <section id="sec1">
     <div class="paginacao-wrapper">
@@ -69,7 +76,19 @@
           </div>
           <div class="figSec FundoHome3"></div>
         </div>
-        <div class="item home2">
+        <div class="item home2" id="mapa">
+          <div class="map-container">
+            <img src="./image/MapaLab.png" alt="Mapa Laboratório" class="background-image">
+        
+            <a href="#sec2" class="circle circle-link" data-step="Registro" id="circle1" style="top: 20%; left: 20%;">1</a>
+            <a href="#sec3" class="circle disabled circle-link" data-step="Macroscopia" id="circle2" style="top: 20%; left: 40%;">2</a>
+            <a href="#sec4" class="circle disabled circle-link" data-step="Histoprocessamento" id="circle3" style="top: 20%; left: 60%;">3</a>
+            <a href="#sec9" class="circle disabled circle-link" data-step="Jogo" id="circle8" style="top: 50%; left: 27%;">8</a>
+            <a href="#sec5" class="circle disabled circle-link" data-step="Emblocamento" id="circle4" style="top: 50%; left: 45%;">4</a>
+            <a href="#sec6" class="circle disabled circle-link" data-step="Microtomia" id="circle5" style="top: 50%; left: 65%;">5</a>
+            <a href="#sec8" class="circle disabled circle-link" data-step="Microscopia" id="circle7" style="top: 75%; left: 30%;">7</a>
+            <a href="#sec7" class="circle disabled circle-link" data-step="Coloração" id="circle6" style="top: 75%; left: 60%;">6</a>
+        </div>
         </div>
       </div>
       <div class="dots" data-dots-for="paginacao0"></div>
@@ -281,7 +300,10 @@
             <h2>VOCÊ SABIA?</h2>
             <p>A conferência dos dados do paciente e da amostra no momento do
               registro é a primeira etapa pré-analítica essencial para garantir
-              a rastreabilidade e segurança no diagnóstico.</p>
+              a rastreabilidade e segurança no diagnóstico.
+            </p>
+            <button class="btnVoltar"><a href="#mapa">Mapa</a></button>
+
           </div>
         </div>
         <div class="dots" data-dots-for="paginacao1"></div>
@@ -367,7 +389,10 @@
           <div class="tituloCentro">
             <h2>VOCÊ SABIA?</h2>
             <p>O ideal é que o tempo entre a coleta da biópsia e sua imersão no
-              fixador não ultrapasse 30 minutos para preservar adequadamente os tecidos.</p>
+              fixador não ultrapasse 30 minutos para preservar adequadamente os tecidos.
+            </p>
+            <button class="btnVoltar"><a href="#mapa">Mapa</a></button>
+
           </div>
         </div>
       </div>
@@ -407,7 +432,10 @@
               com a parafina.
               Por fim, acontece a <strong>impregnação</strong>, na qual o tecido é completamente infiltrado por parafina
               líquida, aquecida entre <strong>58 °C e 60 °C</strong>, oferecendo as condições ideais para a confecção de
-              material emblocado.</p>
+              material emblocado.
+            </p>
+            <button class="btnVoltar"><a href="#mapa">Mapa</a></button>
+
           </div>
         </div>
       </div>
@@ -436,7 +464,10 @@
           <div class="tituloCentro">
             <h2>VOCÊ SABIA?</h2>
             <p>A orientação correta da amostra durante o emblocamento é fundamental
-              para garantir que o corte histológico mostre a área de interesse.</p>
+              para garantir que o corte histológico mostre a área de interesse.
+            </p>
+            <button class="btnVoltar"><a href="#mapa">Mapa</a></button>
+
           </div>
         </div>
       </div>
@@ -468,7 +499,10 @@
             <p>Um micrômetro (µm) é a unidade de medida usada para
               expressar a espessura dos cortes histológicos, geralmente entre 3 e 5 µm.<br />
               O microtomo é o equipamento responsável por realizar cortes extremamente
-              finos das amostras incluídas em blocos de parafina.</p>
+              finos das amostras incluídas em blocos de parafina.
+            </p>
+            <button class="btnVoltar"><a href="#mapa">Mapa</a></button>
+
           </div>
         </div>
       </div>
@@ -503,7 +537,10 @@
               Já a Eosina é um corante ácido que se liga a estruturas básicas do citoplasma e proteínas,
               corando-as em tons de rosa a vermelho, caracterizando a eosinofilia. Essa combinação contrastante
               entre a basofilia nuclear e a eosinofilia citoplasmática permite uma visualização
-              nítida dos detalhes celulares na coloração de rotina Hematoxilina e Eosina (HE).</p>
+              nítida dos detalhes celulares na coloração de rotina Hematoxilina e Eosina (HE).
+            </p>
+            <button class="btnVoltar"><a href="#mapa">Mapa</a></button>
+
           </div>
         </div>
       </div>
@@ -537,7 +574,9 @@
               para ampliar imagens de estruturas microscópicas. Com ele, é possível observar
               células e tecidos com aumentos de até 1000 vezes! A lente objetiva e a lente ocular
               trabalham em conjunto para formar uma imagem ampliada, sendo a objetiva responsável pela
-              primeira ampliação e a ocular pela ampliação final que chega aos nossos olhos.</p>
+              primeira ampliação e a ocular pela ampliação final que chega aos nossos olhos.
+            </p>
+            <button class="btnVoltar"><a href="#mapa">Mapa</a></button>
           </div>
         </div>
       </div>
@@ -633,6 +672,7 @@
   </section>
 
   <script src="js/script.js"></script>
+  <script src="js/scriptMapa.js"></script>
   <script src="js/scriptGamepatologic.js"></script>
 </body>
 

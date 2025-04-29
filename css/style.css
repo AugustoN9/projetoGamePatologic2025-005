@@ -17,6 +17,27 @@ html {
 scroll-padding-top: 80px; /* mesma altura da navbar */
 }
 
+
+  
+  #progressContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 6px;
+    width: 100%;
+    background-color: #e0e0e0;
+    z-index: 9999;
+  }
+  
+  #progressBar {
+    height: 100%;
+    width: 0;
+    background-color: #4caf50;
+    transition: width 0.2s ease-out;
+  }
+  
+
+
   .navbar {
     position: fixed;
     top: 0;
@@ -214,6 +235,15 @@ font-weight: 100;
     color:#4c15e4e4;
 }
 
+.home2{
+    background-color: #FFF8F2;      
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+}
+
+
 .FundoHome{
     
     background-image: url("../image/pele.png");
@@ -228,12 +258,10 @@ font-weight: 100;
     background-size: cover;  
 }
 
-.home2{
-    background-color: #fff;
-    background-image: url("../image/processos.png");
-    background-repeat: no-repeat;
-    background-size: 80%;  
-    background-position: center;
+.home2 img{
+    margin: 8% 12% 0 14%;
+    width: 70%;
+   
 }
 
 .figSec{
@@ -330,14 +358,16 @@ font-weight: 100;
     font-size: 1.5rem;
 }
 
+.tituloCentro{
+    text-align: center;
+}
+
 .tituloCentro h2{
     padding: 0;
-    text-align: center;
 }
 
 .tituloCentro p{
     padding: 2rem;
-    text-align: center;
 }
 
 h1, h2 {
@@ -371,6 +401,175 @@ z-index: 10;
   .dot.active {
     background-color: #070c89;
   }
+
+/*  Mapa Lab   */
+
+
+.map-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.background-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Círculos numerados */
+.circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 123, 255, 0.8);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 0 0 rgba(0, 123, 255, 0.4);
+    animation: pulse 2s infinite, fadeInUp 1s ease forwards;
+    opacity: 0;
+}
+
+.circle.clicked {
+    font-size: 0.75rem;
+    padding: 5px;
+    text-align: center;
+    line-height: 1.2;
+    white-space: normal;
+    word-break: break-word;
+  }
+  
+
+/* Efeito hover */
+.circle:hover {
+    background: rgba(0, 123, 255, 1);
+    transform: scale(1.1);
+}
+
+/* Outras regras mantidas iguais */
+
+.circle.disabled {
+    pointer-events: none;
+    background: rgba(150, 150, 150, 0.6); /* Cinza para mostrar bloqueado */
+    color: rgba(150, 150, 150, 0.9);   
+}
+
+.circle.visited {
+    -animation: none ;
+    background: #4CAF50;
+    color: white;
+    cursor: default; /* Muda o cursor, mas mantém o botão visível */
+    
+}
+
+.circle-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #007bff;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  .circle-link.clicked {
+    width: 10%;
+    background-color: #4caf50; /* Verde ou outra cor */
+    pointer-events: none;
+    cursor: default;
+  }
+  
+
+
+/* === Animações === */
+
+/* Fade + slide up */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Pulsar */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(0, 123, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+    }
+}
+
+
+.btnVoltar {  
+  border-radius: 9px;
+  box-sizing: border-box;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.2rem;
+  height: 52px;
+  margin: 0;
+  outline: none;
+  overflow: hidden;
+  padding: 0 32px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btnVoltar a{
+    text-decoration: none;
+}
+
+.btnVoltar:hover {
+ font-size: 1.3rem;
+}
+
+.btnVoltar:active {
+  outline: 0;
+}
+
+.btnVoltar:focus {
+  box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
+}
+
+@media (max-width: 420px) {
+  .btnVoltar {
+    height: 48px;
+  }
+}
+
+/* Para tablets (modo retrato e paisagem) */
+
+@media (max-width: 1024px) {
+
+}
+
+/* Para smartphones (em geral) */
+
+@media (max-width: 768px) {
+
+}
+
 
   @media (max-width: 1190px) {
     .textoEsq p{       
